@@ -1,9 +1,10 @@
 class PlantsController < ApplicationController
     
+    wrap_parameters format: []
      # GET '/plants'
     def index
         plants = Plant.all
-        render json: plants
+        render json: plants, status: :ok
     end
 
      # GET 'plants/:id'

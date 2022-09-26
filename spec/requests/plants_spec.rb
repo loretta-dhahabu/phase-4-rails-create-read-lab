@@ -6,11 +6,11 @@ RSpec.describe "Plants", type: :request do
     Plant.create(name: 'ZZ Plant', image: './images/zz-plant.jpg', price: '25.98')
   end
 
-  # describe "routes" do
-  #   it 'does not create unused routes' do
-  #     expect { patch "/plants/1" }.to raise_error(ActionController::RoutingError)
-  #   end
-  # end
+  describe "routes" do
+    it 'does not create unused routes' do
+      expect { patch "/plants/1" }.to raise_error(ActionController::RoutingError)
+    end
+  end
 
   describe "GET /plants" do
     it 'returns an array of all plants' do
